@@ -1,0 +1,36 @@
+Modules 
+
+input
+
+def getValue():
+    userInput = input("Enter an integer")
+    userInput = int(userInput)
+    return userInput
+
+validate
+
+def validateValue(value):
+    try:
+        val = int(value)
+        return 'True'
+    except ValueError:
+       return 'False'
+
+findArea
+
+def findArea(var1, var2):
+    area = var1 * var2
+    return area
+
+main
+
+import validate, findArea, input
+
+userInput = input.getValue()
+validatedInput = validate.validateValue(userInput)
+
+if validatedInput == 'True':
+    area = findArea.findArea(userInput, userInput)
+    print(area)
+else:
+    print("Is not an integer")
